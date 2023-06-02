@@ -27,7 +27,7 @@
 
 // Tunable parameters - defaults tested on mega2560 R3
 #define VED_LINE_SIZE 30		 // Seems to be plenty. VE.Direct protocol could change
-#define VED_MAX_LEBEL_SIZE 6	 // Max length of all labels of interest + '\0'. See ved_labels[]
+#define VED_MAX_LEBEL_SIZE 23	 // Max length of all labels of interest + '\0'. See ved_labels[]
 #define VED_MAX_READ_LOOPS 60000 // How many read loops to be considered a read time-out
 #define VED_MAX_READ_LINES 50	 // How many lines to read looking for a value
 								 // before giving up. Also determines lines for diag dump
@@ -40,6 +40,23 @@ enum VE_DIRECT_DATA {
 	VE_VOLTAGE,
 	VE_POWER,
 	VE_CURRENT,
+	VE_POWER_PV,
+	VE_VOLTAGE_PV,
+	VE_STATE,
+	VE_YIELD_TODAY,
+	VE_YIELD_TOTAL,
+	VE_YIELD_YESTERDAY,
+	VE_POWER_MAX_TODAY,
+	VE_AC_OUT_V,
+	VE_AC_OUT_I,
+	VE_AC_OUT_S,
+	VE_AC_MODE,
+	VE_ERROR,
+	VE_WARN,
+	VE_OR,
+	VE_AR,
+	VE_RELAY,
+	VE_FW,
 	VE_ALARM,
 	VE_LAST_LABEL,
 };
@@ -50,6 +67,23 @@ const char ved_labels[VE_LAST_LABEL][VED_MAX_LEBEL_SIZE] PROGMEM = {
 		"V",
 		"P",
 		"I",
+		"PPV",
+		"VPV",
+		"CS",
+		"H20",
+		"H19",
+		"H22",
+		"H21",
+		"AC_OUT_V",
+		"AC_OUT_I",
+		"AC_OUT_S",
+		"MODE",
+		"WARN",
+		"OR",
+		"AR",
+		"Relay",
+		"ERR",
+		"FW",
 		"Alarm",
 };
 
