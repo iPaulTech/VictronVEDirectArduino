@@ -1,3 +1,5 @@
+# Repo moved to https://codeberg.org/berzdev/arduino-victron-vedirect
+
 # VictronVEDirectArduino
 Lightweight Arduino library to read data using the VE.Direct protocol from Victron Energy devices.
 
